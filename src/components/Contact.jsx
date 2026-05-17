@@ -10,9 +10,11 @@ export default function Contact() {
     e.preventDefault();
     const subject = encodeURIComponent(`Project Inquiry from ${form.name}`);
     const body = encodeURIComponent(`Name: ${form.name}\nEmail: ${form.email}\nProject Type: ${form.project}\n\nMessage:\n${form.message}`);
-    const mailtoLink = `mailto:nxbone.dev@gmail.com?subject=${subject}&body=${body}`;
+    const mailtoLink = `https://mail.google.com/mail/?view=cm&fs=1&to=nxbone.dev@gmail.com&subject=${subject}&body=${body}`;
     const a = document.createElement('a');
     a.href = mailtoLink;
+    a.target = '_blank';
+    a.rel = 'noopener noreferrer';
     a.click();
     setSent(true);
   };
