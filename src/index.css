@@ -1,0 +1,105 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  /* Nxbone Stitch Design System */
+  --primary: #0055FF;
+  --primary-dark: #0041C8;
+  --primary-light: #E3E6FF;
+  --bg: #F8FAFC;
+  --bg-white: #FFFFFF;
+  --bg-surface: #F2F4F6;
+  --bg-surface-high: #ECEEF0;
+  --text-900: #0F172A;
+  --text-500: #64748B;
+  --text-400: #8A93A8;
+  --border: #E2E8F0;
+  --border-focus: #0055FF;
+  --shadow-card: 0px 10px 30px rgba(0,0,0,0.04);
+
+  --font-display: 'Syne', sans-serif;
+  --font-body: 'DM Sans', sans-serif;
+  --transition: 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+
+  --radius-sm: 4px;
+  --radius: 4px;
+  --radius-md: 8px;
+  --radius-lg: 8px;
+  --radius-xl: 12px;
+  --radius-full: 9999px;
+
+  --container: 1280px;
+  --gutter: 24px;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-body);
+  background: var(--bg);
+  color: var(--text-900);
+  line-height: 1.6;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--text-400); }
+
+::selection { background: var(--primary-light); color: var(--primary); }
+
+/* Utility */
+.container {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 80px;
+}
+@media (max-width: 1024px) { .container { padding: 0 40px; } }
+@media (max-width: 640px) { .container { padding: 0 20px; } }
+
+/* Label caps style */
+.label-caps {
+  font-family: var(--font-body);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+/* Section tags */
+.section-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 5px 14px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-full);
+  background: var(--bg-white);
+  color: var(--primary);
+  font-family: var(--font-body);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
