@@ -10,7 +10,10 @@ export default function Contact() {
     e.preventDefault();
     const subject = encodeURIComponent(`Project Inquiry from ${form.name}`);
     const body = encodeURIComponent(`Name: ${form.name}\nEmail: ${form.email}\nProject Type: ${form.project}\n\nMessage:\n${form.message}`);
-    window.location.href = `mailto:nxbone.dev@gmail.com?subject=${subject}&body=${body}`;
+    const mailtoLink = `mailto:nxbone.dev@gmail.com?subject=${subject}&body=${body}`;
+    const a = document.createElement('a');
+    a.href = mailtoLink;
+    a.click();
     setSent(true);
   };
 
@@ -158,8 +161,8 @@ export default function Contact() {
                   cursor: 'pointer', letterSpacing: '0.08em', textTransform: 'uppercase',
                   transition: 'background 0.2s, transform 0.2s',
                 }}
-                onMouseEnter={e => { e.target.style.background = '#0041C8'; e.target.style.transform = 'translateY(-1px)'; }}
-                onMouseLeave={e => { e.target.style.background = '#0055FF'; e.target.style.transform = 'none'; }}
+                onMouseEnter={e => { e.currentTarget.style.background = '#0041C8'; e.currentTarget.style.transform = 'translateY(-1px)'; }}
+                onMouseLeave={e => { e.currentTarget.style.background = '#0055FF'; e.currentTarget.style.transform = 'none'; }}
                 >
                   Send Message →
                 </button>
