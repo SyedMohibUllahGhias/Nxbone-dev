@@ -1,6 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <rect width="64" height="64" rx="14" fill="#0A0F1E"/>
-  <text x="8" y="48" font-family="Arial Black" font-weight="900" font-size="42" fill="#00D4FF">N</text>
-  <circle cx="50" cy="20" r="8" fill="#00D4FF" opacity="0.9"/>
-  <circle cx="50" cy="20" r="4" fill="#0A0F1E"/>
+  <!-- Dark rounded square background -->
+  <rect width="64" height="64" rx="10" fill="#1C1410"/>
+  <!-- N letter in cyan/teal -->
+  <text x="7" y="50" font-family="Arial Black, Arial" font-weight="900" font-size="46" fill="#38E5FF">N</text>
+  <!-- Degree symbol superscript -->
+  <text x="46" y="22" font-family="Arial" font-weight="700" font-size="18" fill="#38E5FF">°</text>
 </svg>
