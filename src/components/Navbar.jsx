@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import logo from '../assets/logo.png';
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -25,13 +26,7 @@ export default function Navbar() {
       <div style={{ maxWidth: '1280px', width: '100%', margin: '0 auto', padding: '0 80px', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
         {/* Logo */}
         <a href="#" style={{ display: 'flex', alignItems: 'center', gap: '10px', textDecoration: 'none' }}>
-          <div style={{
-            width: '36px', height: '36px', borderRadius: '8px',
-            background: '#0055FF',
-            display: 'flex', alignItems: 'center', justifyContent: 'center',
-            fontSize: '17px', fontWeight: '800', color: '#fff',
-            fontFamily: 'var(--font-display)',
-          }}>N</div>
+          <img src={logo} alt="Nxbone Logo" style={{ height: '36px', width: 'auto', objectFit: 'contain' }} />
           <span style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: '17px', letterSpacing: '-0.3px', color: '#0F172A' }}>
             Nxbone<span style={{ color: '#0055FF' }}> Dev</span>
           </span>

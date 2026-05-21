@@ -1,3 +1,5 @@
+import logo from '../assets/logo.png';
+
 export default function Footer() {
   return (
     <footer style={{
@@ -14,12 +16,7 @@ export default function Footer() {
           {/* Brand */}
           <div style={{ maxWidth: '300px' }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '14px' }}>
-              <div style={{
-                width: '34px', height: '34px', borderRadius: '6px',
-                background: '#0055FF',
-                display: 'flex', alignItems: 'center', justifyContent: 'center',
-                fontFamily: 'var(--font-display)', fontWeight: 800, fontSize: '16px', color: '#fff',
-              }}>N</div>
+              <img src={logo} alt="Nxbone Logo" style={{ height: '34px', width: 'auto', objectFit: 'contain' }} />
               <span style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: '16px', color: '#0F172A' }}>
                 Nxbone<span style={{ color: '#0055FF' }}> Developers</span>
               </span>
